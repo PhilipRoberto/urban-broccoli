@@ -1,6 +1,6 @@
 export function ReceiptPreview() {
   return (
-    <div className="bg-card-bg border border-border rounded-lg p-4 sm:p-6 lg:p-8 animate-float-up max-w-sm sm:max-w-none mx-auto">
+    <div className="bg-card-bg border border-border rounded-lg p-4 sm:p-6 lg:p-8 xl:p-10 2xl:p-12 animate-float-up max-w-sm sm:max-w-none xl:max-w-lg 2xl:max-w-2xl mx-auto">
       {/* Header */}
       <div className="flex justify-between items-start mb-4 sm:mb-6 pb-3 sm:pb-5 border-b border-border gap-2">
         <div className="min-w-0">

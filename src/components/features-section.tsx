@@ -39,28 +39,28 @@ const features: Feature[] = [
 
 export function FeaturesSection() {
   return (
-    <section id="features" className="py-12 lg:py-20 px-4 sm:px-8 lg:px-10 max-w-6xl mx-auto">
-      <div className="text-xs text-gold uppercase tracking-widest font-medium mb-3 sm:mb-4">Features</div>
-      <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl leading-tight mb-3 sm:mb-4 max-w-2xl">
+    <section id="features" className="py-12 lg:py-20 xl:py-28 2xl:py-32 px-4 sm:px-8 lg:px-10 xl:px-16 2xl:px-20 max-w-6xl xl:max-w-7xl 2xl:max-w-none 2xl:w-screen 2xl:ml-[-50vw] 2xl:pl-[max(50vw,50%)] mx-auto">
+      <div className="text-xs lg:text-sm text-gold uppercase tracking-widest font-medium mb-3 sm:mb-4 xl:mb-6">Features</div>
+      <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl leading-tight mb-3 sm:mb-4 max-w-2xl xl:max-w-3xl 2xl:max-w-4xl">
         Everything a receipt <em className="italic text-gold">needs</em>
       </h2>
-      <p className="text-muted text-sm sm:text-base leading-relaxed max-w-2xl mb-8 lg:mb-12">
+      <p className="text-muted text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl xl:max-w-3xl mb-8 lg:mb-12 xl:mb-16 2xl:mb-20">
         No more handwritten notes or generic invoices. Give every sale a professional record your customers keep.
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border rounded-lg overflow-hidden">
         {features.map((feature) => (
-          <div key={feature.title} className="bg-background p-5 sm:p-6 lg:p-8 hover:bg-black/30 transition-colors">
-            <div className="w-8 h-8 sm:w-9 sm:h-9 border border-border rounded flex items-center justify-center mb-4 sm:mb-5">
+          <div key={feature.title} className="bg-background p-5 sm:p-6 lg:p-8 xl:p-10 2xl:p-12 hover:bg-black/30 transition-colors">
+            <div className="w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 border border-border rounded flex items-center justify-center mb-4 sm:mb-5 xl:mb-6">
               <svg
                 viewBox="0 0 24 24"
-                className="w-4 h-4 stroke-gold fill-none stroke-1.5 stroke-linecap-round stroke-linejoin-round"
+                className="w-4 h-4 lg:w-5 lg:h-5 stroke-gold fill-none stroke-1.5 stroke-linecap-round stroke-linejoin-round"
               >
                 <path d={feature.icon} />
               </svg>
             </div>
-            <h3 className="font-serif text-sm sm:text-base text-paper mb-2">{feature.title}</h3>
-            <p className="text-xs text-muted leading-relaxed">{feature.description}</p>
+            <h3 className="font-serif text-sm sm:text-base lg:text-lg xl:text-lg text-paper mb-2">{feature.title}</h3>
+            <p className="text-xs lg:text-sm text-muted leading-relaxed">{feature.description}</p>
           </div>
         ))}
       </div>
