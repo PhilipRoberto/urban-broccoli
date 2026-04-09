@@ -36,24 +36,24 @@ const shareOptions: ShareOption[] = [
 
 export function SharingSection() {
   return (
-    <section className="bg-card-bg border-t border-b border-border py-20 px-10">
+    <section className="bg-card-bg border-t border-b border-border py-12 lg:py-20 px-4 sm:px-8 lg:px-10">
       <div className="max-w-6xl mx-auto">
-        <div className="text-xs text-gold uppercase tracking-widest font-medium mb-4">Sharing</div>
-        <h2 className="font-serif text-4xl leading-tight mb-4 max-w-2xl">
+        <div className="text-xs text-gold uppercase tracking-widest font-medium mb-3 sm:mb-4">Sharing</div>
+        <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl leading-tight mb-3 sm:mb-4 max-w-2xl">
           Send it <em className="italic text-gold">their way</em>
         </h2>
-        <p className="text-muted text-base leading-relaxed max-w-2xl mb-12">
+        <p className="text-muted text-sm sm:text-base leading-relaxed max-w-2xl mb-8 lg:mb-12">
           PDF, image, WhatsApp, email, or direct download. Your customers receive receipts the way they prefer.
         </p>
 
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
           {shareOptions.map((option) => (
             <div
               key={option.title}
-              className="border border-border rounded-lg p-6 hover:border-gold/30 transition-colors"
+              className="border border-border rounded-lg p-4 sm:p-5 lg:p-6 hover:border-gold/30 transition-colors"
             >
               <div
-                className="w-8 h-8 rounded flex items-center justify-center mb-4 border"
+                className="w-8 h-8 rounded flex items-center justify-center mb-3 sm:mb-4 border"
                 style={{
                   backgroundColor: option.bgColor,
                   borderColor: option.borderColor
@@ -67,7 +67,7 @@ export function SharingSection() {
                   <path d={option.icon} />
                 </svg>
               </div>
-              <h3 className="font-serif text-base text-paper mb-2">{option.title}</h3>
+              <h3 className="font-serif text-sm sm:text-base text-paper mb-2">{option.title}</h3>
               <p className="text-xs text-muted leading-relaxed">{option.description}</p>
             </div>
           ))}

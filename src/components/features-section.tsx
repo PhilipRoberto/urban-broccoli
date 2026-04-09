@@ -39,19 +39,19 @@ const features: Feature[] = [
 
 export function FeaturesSection() {
   return (
-    <section id="features" className="py-20 px-10 max-w-6xl mx-auto">
-      <div className="text-xs text-gold uppercase tracking-widest font-medium mb-4">Features</div>
-      <h2 className="font-serif text-4xl leading-tight mb-4 max-w-2xl">
+    <section id="features" className="py-12 lg:py-20 px-4 sm:px-8 lg:px-10 max-w-6xl mx-auto">
+      <div className="text-xs text-gold uppercase tracking-widest font-medium mb-3 sm:mb-4">Features</div>
+      <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl leading-tight mb-3 sm:mb-4 max-w-2xl">
         Everything a receipt <em className="italic text-gold">needs</em>
       </h2>
-      <p className="text-muted text-base leading-relaxed max-w-2xl mb-12">
+      <p className="text-muted text-sm sm:text-base leading-relaxed max-w-2xl mb-8 lg:mb-12">
         No more handwritten notes or generic invoices. Give every sale a professional record your customers keep.
       </p>
 
-      <div className="grid grid-cols-3 gap-px bg-border rounded-lg overflow-hidden">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border rounded-lg overflow-hidden">
         {features.map((feature) => (
-          <div key={feature.title} className="bg-background p-8 hover:bg-black/30 transition-colors">
-            <div className="w-9 h-9 border border-border rounded flex items-center justify-center mb-5">
+          <div key={feature.title} className="bg-background p-5 sm:p-6 lg:p-8 hover:bg-black/30 transition-colors">
+            <div className="w-8 h-8 sm:w-9 sm:h-9 border border-border rounded flex items-center justify-center mb-4 sm:mb-5">
               <svg
                 viewBox="0 0 24 24"
                 className="w-4 h-4 stroke-gold fill-none stroke-1.5 stroke-linecap-round stroke-linejoin-round"
@@ -59,7 +59,7 @@ export function FeaturesSection() {
                 <path d={feature.icon} />
               </svg>
             </div>
-            <h3 className="font-serif text-base text-paper mb-2">{feature.title}</h3>
+            <h3 className="font-serif text-sm sm:text-base text-paper mb-2">{feature.title}</h3>
             <p className="text-xs text-muted leading-relaxed">{feature.description}</p>
           </div>
         ))}

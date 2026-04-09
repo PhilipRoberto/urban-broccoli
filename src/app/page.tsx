@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <main className="bg-background text-foreground">
       <Hero />
-      <hr className="border-none border-t border-border mx-10" />
+      <hr className="border-none border-t border-border mx-4 sm:mx-8 lg:mx-10" />
       <FeaturesSection />
       <SharingSection />
       <HowItWorks />
