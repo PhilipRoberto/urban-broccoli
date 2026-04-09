@@ -1,115 +1,55 @@
-import { Button } from "./ui/button";
-import getSymbolFromCurrency from "currency-symbol-map";
+import { ReceiptPreview } from "./receipt-preview";
 
-export function Hero(): React.ReactNode {
-  const NGN = getSymbolFromCurrency("NGN");
+export function Hero() {
   return (
-    <section className="flex justify-center items-center gap-40 mt-40">
-      <div className="flex flex-col gap-12">
-        <h3>BUILT FOR NIGERIAN BUSINESSES</h3>
-        <h1>
-          Receipts your customers will <span>actually trust</span>
+    <section className="grid grid-cols-2 gap-16 py-20 px-10 max-w-6xl mx-auto items-center">
+      {/* Left Column */}
+      <div className="flex flex-col gap-8">
+        {/* Eyebrow */}
+        <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/30 text-gold text-xs font-medium px-3 py-2 rounded w-fit uppercase tracking-widest">
+          Built for Nigerian businesses
+        </div>
+
+        {/* Heading */}
+        <h1 className="font-serif text-5xl leading-tight text-balance">
+          Receipts your customers will <em className="italic text-gold">actually trust</em>
         </h1>
-        <p>
-          Create branded, signed receipts in seconds. Share via WhatsApp, email
-          or download - with QR code your customers can verify.
+
+        {/* Subheading */}
+        <p className="text-muted text-base leading-relaxed max-w-lg">
+          Create branded, signed receipts in seconds. Share via WhatsApp, email or download — with a QR code your customers can verify.
         </p>
-        <Button
-          variant="link"
-          className="border border-white px-10 py-6 text-white cursor-pointer hover:opacity-50"
-        >
-          Start free
-        </Button>
-        <Button
-          variant="link"
-          className="border border-white px-10 py-6 text-white cursor-pointer hover:opacity-50"
-        >
-          See a sample receipt
-        </Button>
-        <hr />
-        <div>
+
+        {/* Buttons */}
+        <div className="flex gap-4 flex-wrap">
+          <button className="bg-gold text-ink border-none px-7 py-3 rounded font-medium cursor-pointer hover:bg-gold-light transition-colors text-sm">
+            Start for free
+          </button>
+          <button className="bg-transparent text-paper border border-border px-7 py-3 rounded font-medium cursor-pointer hover:border-muted transition-colors text-sm">
+            See a sample receipt
+          </button>
+        </div>
+
+        {/* Stats */}
+        <div className="flex gap-10 pt-6 border-t border-border">
           <div>
-            <h4>3 min</h4>
-            <h5>FIRST RECEIPT</h5>
+            <div className="font-serif text-2xl text-paper leading-none mb-1">3 min</div>
+            <div className="text-xs text-muted uppercase tracking-widest">First receipt</div>
           </div>
           <div>
-            <h4>100%</h4>
-            <h5>BRANDED</h5>
+            <div className="font-serif text-2xl text-paper leading-none mb-1">100%</div>
+            <div className="text-xs text-muted uppercase tracking-widest">Branded</div>
           </div>
           <div>
-            <h4>QR</h4>
-            <h5>VERIFIED</h5>
+            <div className="font-serif text-2xl text-paper leading-none mb-1">QR</div>
+            <div className="text-xs text-muted uppercase tracking-widest">Verified</div>
           </div>
         </div>
       </div>
-      <div className="border border-white">
-        <div>
-          <div>
-            <h3>ZOLA FASHION HOUSE</h3>
-            <p>Lagos Island, Nigeria. zolafashion.ng</p>
-          </div>
-          <h3>ZF</h3>
-        </div>
-        <hr />
 
-        <div>
-          <h4>Receipt #RCP-0041</h4>
-          <h4>ISSUED</h4>
-        </div>
-
-        <div>
-          <div>
-            <h5>DATE</h5>
-            <p>9 Apr 2026</p>
-          </div>
-          <div>
-            <h5>CURRENCY</h5>
-            <p>NGN</p>
-          </div>
-        </div>
-
-        <div>
-          <h3>BILLED TO</h3>
-          <p>Adaeze Okonkwo</p>
-          <p>adaezeokonkwo@gmail.com - +234 801 234 5678</p>
-        </div>
-
-        <table>
-          <thead>
-            <tr>
-              <th>ITEM</th>
-              <th>QTY</th>
-              <th>UNIT PRICE</th>
-              <th>SUBTOTAL</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Ankara wrap dress</td>
-              <td>2</td>
-              <td>{NGN}45,000</td>
-              <td>{NGN}90,000</td>
-            </tr>
-            <tr>
-              <td>Beaded clutch bag</td>
-              <td>1</td>
-              <td>{NGN}18,500</td>
-              <td>{NGN}18,500</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <div>
-          <h3>TOTAL</h3>
-          <p>{NGN}108,500</p>
-        </div>
-
-        <div>
-          <div>
-            <span>___________</span>
-            <h6>AUTHORISED SIGNATURE</h6>
-          </div>
-        </div>
+      {/* Right Column - Receipt Preview */}
+      <div>
+        <ReceiptPreview />
       </div>
     </section>
   );
