@@ -36,24 +36,24 @@ const shareOptions: ShareOption[] = [
 
 export function SharingSection() {
   return (
-    <section className="bg-card-bg border-t border-b border-border py-12 lg:py-20 px-4 sm:px-8 lg:px-10">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-xs text-gold uppercase tracking-widest font-medium mb-3 sm:mb-4">Sharing</div>
-        <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl leading-tight mb-3 sm:mb-4 max-w-2xl">
+    <section className="bg-card-bg border-t border-b border-border py-12 lg:py-20 xl:py-28 2xl:py-32 px-4 sm:px-8 lg:px-10 xl:px-16 2xl:px-20">
+      <div className="max-w-6xl xl:max-w-7xl 2xl:max-w-none 2xl:w-screen 2xl:ml-[-50vw] 2xl:pl-[max(50vw,50%)] mx-auto">
+        <div className="text-xs lg:text-sm text-gold uppercase tracking-widest font-medium mb-3 sm:mb-4 xl:mb-6">Sharing</div>
+        <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl leading-tight mb-3 sm:mb-4 max-w-2xl xl:max-w-3xl 2xl:max-w-4xl">
           Send it <em className="italic text-gold">their way</em>
         </h2>
-        <p className="text-muted text-sm sm:text-base leading-relaxed max-w-2xl mb-8 lg:mb-12">
+        <p className="text-muted text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl xl:max-w-3xl mb-8 lg:mb-12 xl:mb-16 2xl:mb-20">
           PDF, image, WhatsApp, email, or direct download. Your customers receive receipts the way they prefer.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-6">
           {shareOptions.map((option) => (
             <div
               key={option.title}
-              className="border border-border rounded-lg p-4 sm:p-5 lg:p-6 hover:border-gold/30 transition-colors"
+              className="border border-border rounded-lg p-4 sm:p-5 lg:p-6 xl:p-8 2xl:p-10 hover:border-gold/30 transition-colors"
             >
               <div
-                className="w-8 h-8 rounded flex items-center justify-center mb-3 sm:mb-4 border"
+                className="w-8 h-8 lg:w-10 lg:h-10 rounded flex items-center justify-center mb-3 sm:mb-4 xl:mb-6 border"
                 style={{
                   backgroundColor: option.bgColor,
                   borderColor: option.borderColor
@@ -61,14 +61,14 @@ export function SharingSection() {
               >
                 <svg
                   viewBox="0 0 24 24"
-                  className="w-4 h-4 fill-none stroke-2 stroke-linecap-round stroke-linejoin-round"
+                  className="w-4 h-4 lg:w-5 lg:h-5 fill-none stroke-2 stroke-linecap-round stroke-linejoin-round"
                   style={{ stroke: option.color }}
                 >
                   <path d={option.icon} />
                 </svg>
               </div>
-              <h3 className="font-serif text-sm sm:text-base text-paper mb-2">{option.title}</h3>
-              <p className="text-xs text-muted leading-relaxed">{option.description}</p>
+              <h3 className="font-serif text-sm sm:text-base lg:text-lg text-paper mb-2">{option.title}</h3>
+              <p className="text-xs lg:text-sm text-muted leading-relaxed">{option.description}</p>
             </div>
           ))}
         </div>
