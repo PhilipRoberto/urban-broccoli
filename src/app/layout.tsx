@@ -1,20 +1,42 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
+import { Navigation } from "@/components/nav";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const ranade = localFont({
+  src: [
+    {
+      path: "../fonts/Ranade-Regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../fonts/Ranade-Italic.otf",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "../fonts/Ranade-Medium.otf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../fonts/Ranade-Bold.otf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../fonts/Ranade-BoldItalic.otf",
+      weight: "700",
+      style: "italic",
+    },
+  ],
+  variable: "--font-ranade",
 });
 
 export const metadata: Metadata = {
-  title: "Urban Broccoli",
-  description: "A project by Patek",
+  title: "urban-broccoli",
+  description: "Branded receipts your customers can trust.",
 };
 
 export default function RootLayout({
@@ -23,11 +45,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="en" className={ranade.variable}>
+      <body
+        className={`min-h-screen bg-[#0a0907] text-white ${ranade.className}`}
+      >
+        <Navigation />
+        {children}
+      </body>
     </html>
   );
 }
