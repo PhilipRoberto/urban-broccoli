@@ -1,42 +1,10 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 import { Navigation } from "@/components/nav";
 
-const ranade = localFont({
-  src: [
-    {
-      path: "../fonts/Ranade-Regular.otf",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../fonts/Ranade-Italic.otf",
-      weight: "400",
-      style: "italic",
-    },
-    {
-      path: "../fonts/Ranade-Medium.otf",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "../fonts/Ranade-Bold.otf",
-      weight: "700",
-      style: "normal",
-    },
-    {
-      path: "../fonts/Ranade-BoldItalic.otf",
-      weight: "700",
-      style: "italic",
-    },
-  ],
-  variable: "--font-ranade",
-});
-
 export const metadata: Metadata = {
-  title: "urban-broccoli",
-  description: "Branded receipts your customers can trust.",
+  title: "Receiptly - Branded Receipts for Nigerian Businesses",
+  description: "Create branded, signed receipts in seconds. Share via WhatsApp, email or download — with a QR code your customers can verify.",
 };
 
 export default function RootLayout({
@@ -45,10 +13,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={ranade.variable}>
-      <body
-        className={`min-h-screen bg-[#0a0907] text-white ${ranade.className}`}
-      >
+    <html lang="en">
+      <body className="min-h-screen bg-background text-foreground font-sans">
         <Navigation />
         {children}
       </body>
