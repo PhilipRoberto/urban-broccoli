@@ -48,7 +48,7 @@ export function Hero() {
           </div>
         </div>
       </div>
-      <div className="w-1/4 bg-[#14120c] border border-[#312f26] rounded-lg px-10 py-8 flex flex-col gap-9">
+      <div className="w-2/6 bg-[#14120c] border border-[#312f26] rounded-3xl px-10 py-8 flex flex-col gap-9">
         <div className="flex justify-between items-center">
           <div>
             <h3 className="font-serif text-white text-xl">

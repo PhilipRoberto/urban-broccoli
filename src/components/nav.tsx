@@ -35,7 +35,7 @@ export function Navigation() {
         className="text-2xl cursor-pointer font-serif"
         onClick={() => router.push("/")}
       >
-        urban-broccoli
+        urban<span className="text-[#c9973a]">-broccoli</span>
       </h1>
       <div className="flex flex-1 justify-end items-center gap-4 sm:gap-6 lg:gap-8 xl:gap-10 2xl:gap-12">
         <div className="hidden sm:flex gap-4 lg:gap-8 xl:gap-10 2xl:gap-12">

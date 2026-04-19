@@ -39,7 +39,7 @@ const shareOptions: ShareOption[] = [
 
 export function SharingSection() {
   return (
-    <section className="flex flex-col items-start justify-center px-72 gap-24 border border-[#312f26] py-32 bg-[#181610]">
+    <section className="flex flex-col items-start justify-center px-96 gap-24 border border-[#312f26] py-32 bg-[#181610]">
       <div className="w-2/5 flex flex-col gap-4">
         <h3 className="text-[#c9973a] text-xl font-medium">SHARING</h3>
         <h2 className="text-5xl font-serif">
